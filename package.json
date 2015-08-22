@@ -14,7 +14,7 @@
   "author": "Jeff Nelson <dj.synthe@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "koa": "^0.21.0",
+    "minimist": "^1.1.3",
     "restify": "^4.0.0"
   },
   "devDependencies": {

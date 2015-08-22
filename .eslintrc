@@ -2,7 +2,7 @@
   "ecmaFeatures": {
     "blockBindings": true,
     "forOf": true,
-    "jsx": true
+    "arrowFunctions": true
   },
   "rules": {
     "semi": 2,

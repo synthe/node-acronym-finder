@@ -9,6 +9,7 @@
 
   "disallowSpacesInsideObjectBrackets": null,
   "disallowImplicitTypeConversion": ["string"],
+  "disallowMultipleVarDecl": {"allExcept": ["undefined", "require"] },
 
   "safeContextKeyword": "_this",
 
