@@ -1,0 +1,24 @@
+{
+  "name": "epg-interview-application",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "server.js",
+  "scripts": {
+    "server": "node --harmony server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:synthe/epg-interview-application.git"
+  },
+  "author": "Jeff Nelson <dj.synthe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^0.21.0",
+    "restify": "^4.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}

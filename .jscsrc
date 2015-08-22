@@ -1,0 +1,18 @@
+{
+  "preset": "google",
+  "fileExtensions": [".js"],
+
+  "requireParenthesesAroundIIFE": true,
+  "validateLineBreaks": "LF",
+  "validateIndentation": 2,
+  "disallowTrailingComma": true,
+
+  "disallowSpacesInsideObjectBrackets": null,
+  "disallowImplicitTypeConversion": ["string"],
+
+  "safeContextKeyword": "_this",
+
+  "excludeFiles": [
+    "test/**"
+  ]
+}
