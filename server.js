@@ -1,5 +1,5 @@
 'use strict';
-
+require('harmonize')();
 // this is a rest server implementation of the acronym library
 
 var restify = require('restify'),

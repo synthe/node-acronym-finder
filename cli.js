@@ -1,5 +1,5 @@
 'use strict';
-
+require('harmonize')();
 // this is a command line implementation of the acronym library
 // usage:
 //   node --harmony cli fbi --limit=2
