@@ -6,6 +6,7 @@
   "validateLineBreaks": "LF",
   "validateIndentation": 2,
   "disallowTrailingComma": true,
+  "esnext": true,
 
   "disallowSpacesInsideObjectBrackets": null,
   "disallowImplicitTypeConversion": ["string"],
