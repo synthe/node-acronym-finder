@@ -9,12 +9,8 @@
   "esnext": true,
 
   "disallowSpacesInsideObjectBrackets": null,
-  "disallowImplicitTypeConversion": ["string"],
-  "disallowMultipleVarDecl": {"allExcept": ["undefined", "require"] },
+  "disallowImplicitTypeConversion": [ "string" ],
+  "disallowMultipleVarDecl": { "allExcept": ["undefined", "require"] },
 
-  "safeContextKeyword": "_this",
-
-  "excludeFiles": [
-    "test/**"
-  ]
+  "safeContextKeyword": "_this"
 }

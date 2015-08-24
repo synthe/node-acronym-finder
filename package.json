@@ -1,7 +1,7 @@
 {
   "name": "epg-interview-application",
   "version": "1.0.0",
-  "description": "## Description",
+  "description": "A Node.js based implementation for getting long forms for acronyms",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:synthe/epg-interview-application.git"
+    "url": "git@github.com:synthe/node-acronym-finder.git"
   },
   "author": "Jeff Nelson <dj.synthe@gmail.com>",
   "license": "MIT",

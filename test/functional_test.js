@@ -20,12 +20,8 @@ function getFixture(url, callback) {
       body = body + chunk;
     });
     res.on('end', function() {
-      var bodyJson;
-      try {
-        bodyJson = JSON.parse(body);
-      } catch (e) {
-        throw new Error('unable to decode json');
-      }
+      // will throw an error back to the caller if unable to parse
+      var bodyJson = JSON.parse(body);
       callback(bodyJson);
     });
   });
@@ -33,6 +29,9 @@ function getFixture(url, callback) {
 
 describe('REST API', function() {
   var theServer;
+  this.timeout(5000);
+
+  // start server before running tests
   before(function(done) {
     theServer = require(path.resolve(__dirname, '../server'));
     theServer.on('listening', function() {
@@ -40,6 +39,7 @@ describe('REST API', function() {
     });
   });
 
+  // stop server after tests are done
   after(function() {
     theServer.close();
   });
@@ -51,7 +51,7 @@ describe('REST API', function() {
       'fresh blood imaging',
       'foreign body infections'
     ]};
-    // jscs:enable maximumLineLength
+
     getFixture('http://localhost:8000/fbi', function(bodyJson) {
       bodyJson.should.eql(expected);
       done();
@@ -62,7 +62,7 @@ describe('REST API', function() {
     var expected = {results: [
       'Federal Bureau of Investigation'
     ]};
-    // jscs:enable maximumLineLength
+
     getFixture('http://localhost:8000/fbi?limit=1', function(bodyJson) {
       bodyJson.should.eql(expected);
       done();
@@ -74,7 +74,7 @@ describe('REST API', function() {
       code: 'BadRequestError',
       message: 'limit must be an integer'
     };
-    // jscs:enable maximumLineLength
+
     getFixture('http://localhost:8000/fbi?limit=f', function(bodyJson) {
       bodyJson.should.eql(expected);
       done();
@@ -86,7 +86,7 @@ describe('REST API', function() {
       code: 'BadRequestError',
       message: 'No results found'
     };
-    // jscs:enable maximumLineLength
+
     getFixture('http://localhost:8000/qqqqqqq', function(bodyJson) {
       bodyJson.should.eql(expected);
       done();

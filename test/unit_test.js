@@ -16,6 +16,8 @@ var acronym = require(path.resolve(__dirname, '../lib/acronym'));
 
 describe('Acronym methods', function() {
   describe('request', function() {
+    this.timeout(5000);
+
     it('should return a promise', function() {
       acronym.request('fbi').should.be.an.instanceOf(Promise);
     });
